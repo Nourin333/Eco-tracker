@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="animate-fade-in" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+    <div class="glass-panel" style="width: 100%; max-width: 1000px; padding: 2rem;">
+        <h1>Hello, <span id="user-name">Eco Warrior</span> 👋</h1>
+        <p class="text-center mb-2" style="font-size: 1.1rem;">Here's your environmental impact summary.</p>
+        <p class="text-center mb-4" id="latest-month-info" style="color: #6ee7b7;"></p>
+        
+        <div class="dashboard-grid">
+            <!-- Total CO2 -->
+            <div class="stat-card">
+                <div class="stat-icon">🏭</div>
+                <div class="stat-label">Total CO2 Emitted</div>
+                <div class="stat-value" id="total-co2">0 kg</div>
+            </div>
+            
+            <!-- Carbon Saved -->
+            <div class="stat-card">
+                <div class="stat-icon">🌳</div>
+                <div class="stat-label">Total Carbon Saved</div>
+                <div class="stat-value" id="carbon-saved">0 kg</div>
+            </div>
+            
+            <!-- Credits Earned -->
+            <div class="stat-card">
+                <div class="stat-icon">🌟</div>
+                <div class="stat-label">Credits Earned</div>
+                <div class="stat-value" id="total-credits">0</div>
+            </div>
+            
+            <!-- Wallet Value -->
+            <div class="stat-card wallet-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-label">Wallet Value</div>
+                <div class="stat-value" id="wallet-value">₹ 0</div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4" style="margin-top: 3rem;">
+            <a href="/input" class="btn" style="max-width: 300px; margin: 0 auto;">Enter New Data</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
